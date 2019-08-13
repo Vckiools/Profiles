@@ -1,10 +1,21 @@
+{
+    "server_remote": [
+        "https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server.txt, tag=Sample-01",
+        "https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt, tag=Sample-02"
+    ],
+    "filter_remote": [
+        "https://raw.githubusercontent.com/crossutility/Quantumult-X/master/filter.txt, tag=Sample, force-policy=your-policy-name"
+    ],
+    "rewrite_remote": [
+        "https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-import-rewrite.txt, tag=Sample"
+    ]
+}
+
 ; 20190722_184124
 
 [general]
 server_check_url= http://www.qualcomm.cn/generate_204
 ;geo_location_checker=http://extreme-ip-lookup.com/json/, https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-location-with-script.js
-
-geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
 
 ;network_check_url=http://bing.com/
 ;dns_exclusion_list=*.qq.com, qq.com
@@ -57,12 +68,12 @@ server=/*.xiaomi.com/119.29.29.29
 #
 [policy]
 static=🍎 Apple, direct, proxy
-static=💻 MediaG, proxy, direct
-static=📽 MddiaC, direct, proxy
+static=🌈 Global, proxy, direct
+static=🇨🇳 CMedia, direct, proxy
 static=🎬 YouTube, proxy, direct
 static=📺 Netflix, proxy, direct
-static=🕹 Un/Break,direct, proxy
-static=🌏 MediaG, proxy,direct
+static=🕹 Unbreak,direct, proxy
+static=🇺🇳 GMedia, proxy,direct
 
 ;static=policy-name-1, Sample-A, Sample-B, Sample-C
 ;available=policy-name-2, Sample-A, Sample-B, Sample-C
@@ -76,17 +87,31 @@ static=🌏 MediaG, proxy,direct
 [server_remote]
 https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server.txt, tag=示范订阅1(可删除), enabled=true
 https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt, tag=示范订阅2(可删除), enabled=true
+https://cloudcompute.lbyczf.com/surge2quanx?url=https://dler.cloud/link/JTvQiLLikuEC574O?surge=3, tag=Dler🚨, enabled=true
+;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server.txt, tag=Sample-01
+;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt, tag=Sample-02, enabled=false
 
+#
+# Params ”tag“, ”force-policy“ and ”enabled“ are optional.
+# When there is a force-policy, then the policy in filter of remote resource will be ignored and the force-policy will be used.
+#
 [filter_remote]
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list, tag=🚦Advertising, enabled=true
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Hijacking.list, tag=🚫 Hijacking, enabled=true
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/DomesticMedia.list, force-policy=📽 MeidaC, tag=📽 MediaC, enabled=true
-http://cloudcompute.lbyczf.com/x-rule-set?url=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Netflix.list, tag=📺 Netflix, force-policy=📺 Netflix, enabled=true
-http://cloudcompute.lbyczf.com/x-rule-set?url=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Youtube.list, tag=🎬 YouTube, force-policy=🎬 YouTube, enabled=true
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/ForeignMedia.list, tag=💻 MeidaG,force-policy= 💻 MediaG, enabled=true
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Global.list, tag=🌍 Global, force-policy= 🌏 Global, enabled=true
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Apple.list, tag= Apple, force-policy=🍎 Apple,enabled=true
-https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/China.list, tag=🐼 China, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Unbreak.list, tag=🚦Unbreak, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Telegram.list, tag=✈️ Telegram, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Google.list, tag=🌍 Google, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Mail.list, tag=💻 Mail, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list, tag=🔰Advertising, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Hijacking.list, tag=📖Hijacking, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/ForeignMedia.list, tag=🇺🇳GMedia, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/DomesticMedia.list, tag=🇨🇳CMedia, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Global.list, tag=🌈Global, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Apple.list, tag= Apple, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/China.list, tag=🇨🇳China, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/LAN.list, tag=🍃LAN, enabled=true
+https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Pro.conf, tag=Hua🥝Pro, enabled=false
+https://raw.githubusercontent.com/lhie1/Rules/master/Quantumult/QuantumultX.conf, tag=lhie1🌑9K, enabled=false
+https://raw.githubusercontent.com/shigalin/Config/master/QuantumultX.conf, tag=Shigalin🥏2K, enabled=false
+;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/filter.txt, tag=Sample, force-policy=your-policy-name, enabled=true
 
 [rewrite_remote]
 https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Rewrite.conf, tag=DivienEingine, enabled=true
@@ -112,7 +137,7 @@ ip-cidr, 172.16.0.0/12, direct
 ip-cidr, 192.168.0.0/16, direct
 ip-cidr, 224.0.0.0/24, direct
 geoip, cn, direct
-final, 🕹 Un/Break
+final, 🕹 Unbreak
 
 
 [rewrite_local]
@@ -121,5 +146,5 @@ final, 🕹 Un/Break
 ;skip_validating_cert = false
 ;force_sni_domain_name = false
 ;hostname = *.example.com, *.sample.com
-passphrase = FB1c4FFD
+passphrase = FB1C4FFD
 p12 = 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
